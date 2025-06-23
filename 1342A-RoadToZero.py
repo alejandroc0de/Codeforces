@@ -1,28 +1,26 @@
+# accepted 
+
 cases = int(input(""))
 
 result = []
 
-for i in range (cases):
+for b in range(cases):
 
     x,y = list(map(int,input("").split()))
     a,b = list(map(int,input("").split()))
 
     dolares = 0
 
+    ambos = min(x,y)
+    remaining = max(x,y)-ambos
+    precioambos = ambos*min(b, 2*a)
     
+    # el minimo entre b o multiplicar el precio 1 dos veces
 
-    while (x and y > 0):
-        x = x - 1
-        y = y - 1
-        dolares = dolares + b
-    while (x > 0 and y == 0):
-        a = a - 1
-        dolares = dolares + a
-    while (y > 0 and x == 0):
-        y = y - 1
-        dolares = dolares + a 
+    preciorestante = remaining * a
 
-    result.append(dolares)
+    final = precioambos + preciorestante
+    result.append(final)
 
 for i in result:
     print(i)
