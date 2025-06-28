@@ -27,5 +27,4 @@ def insert_at_beg(head,tail,value):
     return new_node,tail
 
 head, tail = insert_at_beg(head,tail,3)
-
-display(head)
+display(head) 
