@@ -1,3 +1,5 @@
+# accepted 
+
 player = (input())
 
 contador = 0

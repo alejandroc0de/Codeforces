@@ -2,7 +2,7 @@ n = int(input())
 res = 0
 lista = []
 
-
+# time = O(2**N)
 def fibonacci(n):
     if(n == 0):
         return 0
@@ -11,6 +11,5 @@ def fibonacci(n):
     return fibonacci(n-1) + fibonacci(n-2)
 
 for i in range(0,n+1,1):
-    lista.append(fibonacci(i))
-
+    lista.append(fibonacci(i)) 
 print(lista)
