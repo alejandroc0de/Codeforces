@@ -1,4 +1,4 @@
-#accepted
+#acceptedd
 
 a = int(input())
 b = int(input())
@@ -11,3 +11,5 @@ first = 0
 first = max((a+b)*c,(a*b)+c,a*(b+c),a*(b*c),a+b+c)
 
 print(first)
+
+
