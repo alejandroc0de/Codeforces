@@ -1,4 +1,4 @@
-#accepted (HLPD)
+#accepted (HLPD )
 
 datasets = int(input())
 
