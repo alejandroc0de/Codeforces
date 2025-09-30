@@ -1,3 +1,5 @@
+#accepted 900
+
 lista = []
 listaPalabra = []
 
