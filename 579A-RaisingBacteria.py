@@ -1,3 +1,5 @@
+## accepted 
+
 goal = int(input())
 
 
