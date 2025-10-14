@@ -13,7 +13,7 @@ A = TreeNode(1)
 B = TreeNode(2)
 C = TreeNode(3)
 D = TreeNode(4)
-E = TreeNode(5)
+E = TreeNode(5)  
 F = TreeNode(10)
 
 A.left = B
@@ -24,9 +24,10 @@ C.left = F
 
 '''
 def pre_order(node):
+# Si el nodo es nulo entonces nos devolvemos (recursion)
     if not node:
         return
-    print(node)
+    print(node)             # procesamos el nodo y luego left y luego right 
     pre_order(node.left)
     pre_order(node.right)
 pre_order(A)
