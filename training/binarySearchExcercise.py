@@ -1,22 +1,63 @@
-nums = [-1, 0, 3, 5, 9, 12,34,56,78,89,99,123,134,145,156,167,177,200,210,213,215]
-target = 145
+A = [-3, -1, 0, 1, 4, 7]
+
+# Traditional Binary Search - Looking up if number is in array:
+# Time: O(log n)
+# Space: O(1)
+
+def binary_search(arr, target):
+  N = len(arr)
+  L = 0
+  R = N - 1
+
+  while L <= R:
+    M = L + ((R-L) // 2)
+
+    if arr[M] == target:
+      return True
+    elif target < arr[M]:
+      R = M - 1
+    else:
+      L = M + 1
+  return False
+
+binary_search(A, 8)
 
 
+# Condition based
+B = [False, False, False, False, True]
 
-m = 0
+def binary_search_condition(arr):
+  N = len(arr)
+  L = 0
+  R = N - 1
+
+  while L < R:
+    M = (L + R) // 2
+
+    if arr[M]:
+      R = M
+    else:
+      L = M + 1
+
+  return L
+
+print(binary_search_condition(B)) 
+#R:4 Aca empiezan los True, para eso es el algoritmo
 
 
-def getIndex():
-    l = 0
-    r = len(nums)-1
-    while l <= r :
-        m = (l+r)//2
-        if(nums[m]==target):
-            return m
-        elif(target<nums[m]):
-            r = m-1
-        else:
-            l = m + 1
-    return -1
+# Range-Based
+def check(x):
+    return x * x >= 50  # condición a cumplir
 
-getIndex()
+L, R = 1, 100
+ans = -1
+
+while L <= R:
+    M = (L + R) // 2
+    if check(M):
+        ans = M        # posible respuesta
+        R = M - 1      # buscamos si hay uno menor que también cumpla
+                       # Si cambiamos la condicion cambia entre - a + en R
+    else:
+        L = M + 1
+print(ans) #R: 8
