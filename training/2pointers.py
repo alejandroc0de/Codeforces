@@ -1,5 +1,5 @@
 #Squares of a sorted array, return array increasing
-nums = [-4,-1,0,3,10]
+nums = [-4,-1,0,3,10] # This is sorted already 
 left = 0
 right = len(nums)-1
 result = []
@@ -12,4 +12,4 @@ while left<=right:
         result.append(nums[right]**2)
         right = right - 1
 result.reverse()
-print(result)
+print(result) #R: [0, 1, 9, 16, 100]
